@@ -9,24 +9,17 @@ const User = sequelize.define('User', {
     active_status: { type: DataTypes.ENUM('Active', 'Pending'), defaultValue: 'Pending' },
     jdate: { type: DataTypes.DATEONLY },
     adate: { type: DataTypes.DATEONLY , allowNull: true },
-    // dialCode: { type: DataTypes.STRING, allowNull: true },
-    // date_of_birth: {
-    //     type: DataTypes.DATEONLY,
-    //     allowNull: true
-    // },  
+   
     
     email: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true
     },
-    bind_device:{
-        type: DataTypes.ENUM('0', '1'),
-       allowNull: true,
-    },
+   
     username: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true
     },
     usdtTrc20: {
@@ -38,37 +31,27 @@ const User = sequelize.define('User', {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    // lastname: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false
-    // },
-    // user_name: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true
-    // },
+  
     password: {
         type: DataTypes.STRING,
         allowNull: false
     },
     tpassword: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
-    // has_pin: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true
-    // },
+   
     PSR: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
-    // pin: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true
-    // },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     TPSR: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     sponsor: {
         type: DataTypes.INTEGER,

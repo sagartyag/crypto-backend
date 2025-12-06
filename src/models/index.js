@@ -1,12 +1,6 @@
 const sequelize = require("../config/connectDB");
+const User = require("./User");  // <-- already initialized model
 
-// Import User model function
-const User = require('./User');
-
-// Initialize model with sequelize
-const User = User(sequelize);
-
-// Export models
 module.exports = {
   sequelize,
   User,

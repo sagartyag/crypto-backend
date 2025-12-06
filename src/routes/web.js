@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { signup } = require("../controllers/AuthController");
+const authController = require('../controllers/AuthController');
 
-router.post("/signup", signup);
+router.post('/signup', authController.signup);
+router.post('/signin', authController.signin);
 
-// router.post("/login", login);
 
 router.get("/", (req, res) => {
   res.json({ message: "Auth Routes Working Fine" });
