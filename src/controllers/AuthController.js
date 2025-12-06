@@ -14,7 +14,7 @@ const signup = async (req, res) => {
       });
     }
 
-    if (!email || !phone) {
+    if (!email && !phone) {
       return res.status(400).json({
         message: "Either Email or Phone is required",
       });
