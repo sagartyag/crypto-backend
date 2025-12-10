@@ -121,6 +121,7 @@ const signin = async (req, res) => {
         id: user.id,
         email: user.email,
         phone: user.phone,
+        name: user.name,
         username: user.username
       }
     });
