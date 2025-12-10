@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const authController = require('../controllers/AuthController');
+const AuthController = require('../controllers/AuthController');
+const UserController = require('../controllers/UserController');
 
-router.post('/signup', authController.signup);
-router.post('/signin', authController.signin);
+router.post('/signup', AuthController.signup);
+router.post('/signin', AuthController.signin);
+router.get('/user', UserController.getUserDetails);
 
 
 router.get("/", (req, res) => {
